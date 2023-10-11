@@ -14,4 +14,12 @@ userId.toExponential()
 let isLoggedIn:boolean = false
 
 
+let hero:string;
+
+const getHero =()=>{
+  return "theory"
+}
+
+hero = getHero();
+
 export {}
