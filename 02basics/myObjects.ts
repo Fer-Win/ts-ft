@@ -16,16 +16,42 @@ function createCourse():{name: string,price: number}{
 
 
 type User = {
+    readonly _id: string
     name: string;
     email: string;
     isActive: boolean;
+    credcardDetails?:number
 }
 
 function createUsers(user:User): User{
-  return {name:user.name , email:user.email,isActive:user.isActive}
+  return {_id:user._id,name:user.name , email:user.email,isActive:user.isActive}
 }
 
-createUsers({name:'',email:'',isActive:true})
+
+
+let myUser : User ={
+  _id:'234',
+  name:'Hey',
+  email:'h@gmail.com',
+  isActive:false 
+}
+
+myUser.email= 'ehy there'
+// myUser._id = 232
+
+
+type cardNumber = {
+    cardnumber : string
+}
+
+
+
+type cardDate = {
+  cardDate:string
+}
+type cardDetails = cardNumber & cardDate & {
+  cvv: number
+}
 
 
 
