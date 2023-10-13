@@ -48,3 +48,5 @@ let pi:3.4
 let seatAllotment : 'aisle' | 'middle'|'window'
 
 // seatAllotment = 'frontseat'
+
+export{}
