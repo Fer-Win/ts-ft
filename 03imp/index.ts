@@ -11,6 +11,8 @@
 // } 
 
 class User {
+
+  private _courseCount = 1
   
   private readonly city:string = "Jaipur"
   constructor(
@@ -19,6 +21,25 @@ class User {
      ){
   }
 
- 
+  private deleteToker(){
+    console.log("Token Deleted");
+    
+  }
+
+   get getAppleEmail():string{
+      return `apple:${this.email}`
+   }  
+
+   get courseCount():number{
+    return this._courseCount
+   }
+
+   set courseCount(courseNum){
+      if(courseNum<=1){
+        throw new Error("Course count should be more than 1");
+        
+      }
+      this._courseCount = courseNum;
+   }
 } 
 const Ferwin = new User("ff@f.com",'Ferwin Lopez'); 
