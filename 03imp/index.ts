@@ -12,7 +12,7 @@
 
 class User {
 
-  private _courseCount = 1
+  protected _courseCount = 1
   
   private readonly city:string = "Jaipur"
   constructor(
@@ -42,4 +42,13 @@ class User {
       this._courseCount = courseNum;
    }
 } 
+
+class SubUser extends User{
+  isFamily:boolean = true;
+  changeCourseCount(){
+    this._courseCount = 4
+  }
+}
+
+
 const Ferwin = new User("ff@f.com",'Ferwin Lopez'); 
