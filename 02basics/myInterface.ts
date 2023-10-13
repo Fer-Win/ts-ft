@@ -8,7 +8,19 @@ interface User3 {
 }
 
 
-const hello:User3 = {dbId: 22,email:'h@h.com',userId:2323,
+interface User3 {
+  githubToken:string
+}
+
+interface Admin3 extends User3{
+    role: "adming" | "ta" |"learner"
+}
+
+
+
+const hello:Admin3 = {dbId: 22,email:'h@h.com',userId:2323,
+  githubToken:'stss',
+  role:'learner',
   startTrail:()=>{
     return 'sss'
   },
